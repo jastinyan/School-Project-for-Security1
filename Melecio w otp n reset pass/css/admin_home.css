@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
+                url('../img/digital-art-style-yoga-illustration.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    color: #fff;
+}
+
+/* Container */
+.container{
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+/* NAVBAR */
+.navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgb(12, 19, 25);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.navbar-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.system-title{
+    font-size: 32px;
+    font-weight: 600;
+}
+
+/* Right side navbar */
+.buttons-container{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.welcome{
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* Logout Button */
+.btn-logout{
+    padding: 8px 20px;
+    background: rgb(181, 65, 7);
+    border-radius: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.btn-logout:hover{
+    background: rgb(12, 19, 25);
+    border: 1px solid #fff;
+}
+
+/* DASHBOARD */
+.dashboard{
+    margin-top: 130px; /* fixes navbar overlap */
+    padding-bottom: 80px;
+}
+
+.dashboard h2{
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+/* Cards Grid */
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* Individual Card */
+.card{
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    padding: 30px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+}
+
+.card h3{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card p{
+    font-size: 14px;
+    opacity: 0.85;
+    margin-bottom: 20px;
+}
+
+/* Open Button */
+.btn{
+    display: inline-block;
+    padding: 10px 25px;
+    background: rgb(181, 65, 7);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.btn:hover{
+    background: rgb(12, 19, 25);
+    border: 1px solid #fff;
+}
+
+/* FOOTER */
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: rgb(12, 19, 25);
+    text-align: center;
+    padding: 15px 0;
+    font-size: 13px;
+    opacity: 0.8;
+}
