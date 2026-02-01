@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    color: #fff;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
+                url('../img/digital-art-style-yoga-illustration.jpg') center/cover no-repeat;
+}
+
+/* ================== NAVBAR ================== */
+.navbar{
+    position  : fixed;             
+    width: 100%;      
+    background-color: rgb(12, 19, 25);
+    z-index: 1000;
+    top: 0; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.463);
+    padding: 20px 0 20px 0;
+}
+.system-title{
+    font-size: 50px;
+    color: white;
+    margin-left: 50px;
+}
+
+
+/* ================== DASHBOARD WRAPPER ================== */
+.dashboard-wrapper {
+    display: flex;
+    margin-top: 80px; /* navbar height */
+    min-height: calc(100vh - 80px);
+}
+
+/* ================== SIDEBAR ================== */
+.sidebar {
+    position: fixed;
+    top: 80px; /* below navbar */
+    left: 0;
+    width: 220px;
+    height: calc(100vh - 80px);
+    background: rgba(12,19,25,0.95);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.5);
+    padding: 30px 20px;
+}
+
+.sidebar-header {
+    font-family: "Abril Fatface", serif;
+    font-style: italic;
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 15px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color: rgb(181, 65, 7);
+}
+.sidebar h3 {
+    font-style: bold;
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 12px;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #fff;
+}
+.sidebar a {
+    display: block;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.sidebar a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 120%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        rgba(255,255,255,0.2),
+        rgba(255,255,255,0.5),
+        rgba(255,255,255,0.2)
+    );
+    transform: skewX(-20deg);
+    transition: 0.5s;
+}
+
+.sidebar a:hover::before {
+    left: 120%;
+}
+
+.sidebar a:hover {
+    color: #fff;
+    background: rgb(181, 65, 7);
+}
+
+/* Logout Button */
+.btn-logout {
+    margin: 20px;
+    padding: 10px 0;
+    text-align: center;
+    background: rgb(181,65,7);
+    border-radius: 10px;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.btn-logout:hover {
+    background: rgb(12,19,25);
+    border: 1px solid #fff;
+}
+
+/* ================== MAIN CONTENT ================== */
+.dashboard-main {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* center horizontally */
+}
+
+/* Dashboard Header */
+.dashboard-main h1 {
+    font-size: 35px;
+    margin-bottom: 40px;
+    margin-top: 90px;
+}
+
+/* Cards Grid - 2 cards per row, responsive */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto; /* center the grid */
+}
+
+/* Individual Card */
+.card {
+    width: 100%;
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    padding: 30px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 28px;
+    font-weight: 600;
+    color: rgb(181, 65, 7);
+}
+
+/* Buttons inside cards */
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background: rgb(181, 65, 7);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: rgb(12, 19, 25);
+    border: 1px solid #fff;
+}
+
+/* ================== FOOTER ================== */
+.footer{
+    background-color: rgb(12, 19, 25);
+    padding: 30px 0 30px 0;
+}
+.all{
+    color: rgb(135, 135, 135);
+    display: flex;
+    justify-content: center;
+}
+.create{
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    margin-top: 20px;
+}
+.create a{
+    font-style: italic;
+    color: rgb(181, 65, 7);
+    font-weight: 500;
+}
